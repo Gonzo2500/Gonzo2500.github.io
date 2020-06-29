@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: var(--header-bg-color);
+}
+
+:root {
+  --header-bg-color: rgba(15, 15, 15, 1);
+
+  --font-color-main: #fafafa;
+
+  --secondary-color: #ff6ec7;
+}
+
+/*------------------------------------------------------Navigation bar */
+.bg-dark {
+  background: rgba(
+    15,
+    15,
+    15,
+    0.8
+  ) !important; /* override bg-dark !important setting */
+}
+.navbar-dark {
+  color: var(--font-color-main);
+}
+
+.navbar-dark .navbar-toggler {
+  color: #ff6ec7;
+  border-color: var(--header-bg-color);
+}
+.navbar-toggler.custom-toggler {
+  border-color: #ff6ec7;
+}
+
+.icon {
+  color: var(--font-color-main);
+  text-shadow: 0 0 5px #ff6ec7, 0 0 10px #ff6ec7, 0 0 15px #fff,
+    0 0 20px #ff6ec7, 0 0 30px #ff6ec7, 0 0 40px #ff6ec7, 0 0 50px #ff6ec7,
+    0 0 60px #ff6ec7;
+}
+
+.navbar-brand {
+  color: var(--font-color-main);
+  font-family: "Press Start 2P", sans-serif;
+  text-shadow: 0 0 5px #ff6ec7, 0 0 10px #ff6ec7, 0 0 15px #fff,
+    0 0 20px #ff6ec7, 0 0 30px #ff6ec7, 0 0 40px #ff6ec7, 0 0 50px #ff6ec7,
+    0 0 60px #ff6ec7;
+  text-decoration: none;
+}
+
+.navbar-brand:hover {
+  color: var(--font-color-main);
+  text-shadow: 0 0 5px #00f9ff, 0 0 10px #00f9ff, 0 0 15px #00f9ff,
+    0 0 20px #00f9ff, 0 0 30px #00f9ff, 0 0 40px #00f9ff, 0 0 50px #00f9ff,
+    0 0 60px #00f9ff;
+}
+#nav-font-color {
+  font-family: "Roboto";
+  margin-bottom: 0;
+}
+#nav-font-color li.active:after {
+  content: "";
+  height: 1px;
+  display: block;
+  background: #ff6ec7;
+}
+#nav-font-color a {
+  color: var(--font-color-main);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#nav-font-color li {
+  padding: 5px 20px;
+  margin-right: 10px;
+}
+
+.nav-link:hover {
+  color: var(--font-color-main);
+  opacity: 0.8;
+  text-shadow: 0 0 5px #ff6ec7, 0 0 10px #ff6ec7, 0 0 15px #fff,
+    0 0 20px #ff6ec7, 0 0 30px #ff6ec7, 0 0 40px #ff6ec7, 0 0 50px #ff6ec7,
+    0 0 60px #ff6ec7;
+}
+
+.dropdown-toggle::after {
+  border-top: 0.3em solid #ff6ec7;
+}
+
+/* Used to override bootstrap css rules for button */
+div button#cta-download {
+  background: #ff6ec7;
+  border: 1px solid #ff6ec7;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-right: 20px;
+  opacity: 1;
+}
+
+div button#cta-download:hover {
+  background-color: #fafafa;
+}
+
+div button#cta-download a {
+  color: var(--header-bg-color);
+  font-weight: 700;
+  font-family: "Roboto";
+  text-transform: uppercase;
+}
+
+div button#cta-download a:hover {
+  color: var(--header-bg-color);
+  text-decoration: none;
+}
+.dropdown-menu {
+  background: rgba(15, 15, 15, 0.8);
+}
+
+.dropdown-item {
+  color: var(--font-color-main);
+}
+
+.dropdown-item:hover {
+  color: var(--font-color-main);
+  text-shadow: 0 0 5px #ff6ec7, 0 0 10px #ff6ec7, 0 0 15px #fff,
+    0 0 20px #ff6ec7, 0 0 30px #ff6ec7, 0 0 40px #ff6ec7, 0 0 50px #ff6ec7,
+    0 0 60px #ff6ec7;
+  background: rgba(15, 15, 15, 0.8);
+}
+/*------------------------------------------------------Hero Section */
+
+.hero-section {
+  height: 80vh;
+  max-width: 100%;
+  background: linear-gradient(
+      0deg,
+      rgba(15, 15, 15, 0.3),
+      rgba(15, 15, 15, 0.3)
+    ),
+    url("../images/hero-image.jpg") center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text {
+  text-align: center;
+  color: var(--font-color-main);
+  font-family: "Roboto";
+  text-transform: uppercase;
+}
+
+.hero-text .fa-heartbeat {
+  font-size: 3rem;
+  animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  51% {
+    transform: scale(1);
+  }
+
+  20%,
+  70% {
+    transform: scale(1.1);
+  }
+
+  30%,
+  90% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+}
+
+.hero-text i {
+  color: #ff6ec7;
+  text-shadow: 0 0 5px #ff6ec7, 0 0 10px #ff6ec7, 0 0 15px #fff,
+    0 0 20px #ff6ec7, 0 0 30px #ff6ec7, 0 0 40px #ff6ec7, 0 0 50px #ff6ec7,
+    0 0 60px #ff6ec7;
+}
+
+.cta-hero {
+  background: #ff6ec7;
+  border: 1px solid #ff6ec7;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: var(--header-bg-color);
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: "Roboto";
+  text-transform: uppercase;
+}
+
+.cta-hero:hover {
+  color: var(--header-bg-color);
+  background-color: #fafafa;
+  animation: pulse-button 1.8s linear 3;
+}
+
+@keyframes pulse-button {
+  0%,
+  50%,
+  100% {
+    transform: scale(1);
+  }
+
+  20%,
+  70% {
+    transform: scale(1.1);
+  }
+
+  30%,
+  90% {
+    transform: scale(0.9);
+  }
+}
+
+.cta-hero:hover i {
+  animation: rotation 0.2s linear forwards;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(45deg);
+  }
+
+  100% {
+    transform: rotate(90deg);
+    color: #ff6ec7;
+  }
+}
+/*------------------------------------------------------Choose your Game Section */
+
+.game-heading {
+  text-align: center;
+  color: #fafafa;
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+  margin-top: 20px;
+  font-size: 2rem;
+}
+
+.placeholder {
+  margin: 20px 0px 40px 0px;
+  width: 33vw;
+  height: 300px;
+  overflow: hidden;
+  padding: 0;
+}
+
+.game-bg-dota {
+  width: 100%;
+  height: 100%;
+  background-color: black; /* fallback color */
+  background-image: url("../images/dota-background.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  transition: all 0.5s;
+}
+
+.game-bg-lol {
+  width: 100%;
+  height: 100%;
+  background-color: black; /* fallback color */
+  background-image: url("../images/lol-background.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  transition: all 0.5s;
+}
+
+.game-bg-cs {
+  width: 100%;
+  height: 100%;
+  background-color: black; /* fallback color */
+  background-image: url("../images/cs-background.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  transition: all 0.5s;
+}
+
+.game-bg-dota img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.game-bg-lol img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.game-bg-cs img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.placeholder:hover .game-bg-dota {
+  transform: scale(1.2);
+}
+
+.placeholder:hover .game-bg-lol {
+  transform: scale(1.2);
+}
+
+.placeholder:hover .game-bg-cs {
+  transform: scale(1.2);
+}
